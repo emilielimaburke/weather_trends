@@ -1,7 +1,7 @@
 ---
 title: "Exploring Weather Trends"
 author: "Emilie Burke"
-date: "10/12/2017"
+date: "Term 1, 2017"
 output: pdf_document
 ---
 
@@ -55,7 +55,7 @@ I exported the data from the provided SQL workspace through the "Export" button 
 ## CSV
 
 I imported the CSV into R using the `read.csv` command in the `utils` package. 
-```
+```{r export}
 global <- read.csv(file="extract/global.csv", header=TRUE, sep=",")
 raleigh <- read.csv(file="extract/raleigh.csv", header=TRUE, sep=",")
 ```
@@ -70,3 +70,10 @@ suppressWarnings(vis)
 There are seven years of Raleigh data for which there were no metrics. These were considered `NULL` values and were included in calculations as such. The same was true for two years of global data.
 
 ## Observations
+
+1. On average, Raleigh temperatures are much higher than global averages.
+2. After 1750, the gap between the averages stays pretty consisten, with both sets of temperatures having a significant dip in the last quarter of the 18th century. 
+3. While both sets of average temperatures are trending upwards, especially since 1850, there is more volatility in the Raleigh averages. 
+4. Since 2000, the global temperatures seem to be leveling out, but that does not appear to be true for Raleigh. 
+
+You can find the whole code for this project on github here: [https://github.com/emilielimaburke/weather_trends](https://github.com/emilielimaburke/weather_trends)
